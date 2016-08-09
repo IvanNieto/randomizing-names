@@ -1,3 +1,3 @@
 # randomizing-names
 
-For all your random Star Wars character needs
+This will randomize names from a list
