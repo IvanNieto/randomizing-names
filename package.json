@@ -12,7 +12,7 @@
         "test": "cross-env NODE_ENV=test nyc mocha",
         "watch:test": "mocha --watch",
         "report-coverage": "cat ./coverage/lcov.info | codecov",
-        "release": "semantic-release pre && npm publish && semantic-release post",
+        "semantic-release": "semantic-release pre && npm publish && semantic-release post",
         "lint": "eslint src",
         "validate": "npm-run-all --parallel test lint build"
     },
@@ -53,6 +53,7 @@
         "npm-run-all": "2.3.0",
         "nyc": "7.1.0",
         "rimraf": "2.5.4",
+        "semantic-release": "^4.3.5",
         "webpack": "^1.13.1"
     },
     "nyc": {
