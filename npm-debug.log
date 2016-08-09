@@ -1,151 +1,29 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'publish' ]
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'version', 'major' ]
 2 info using npm@3.10.3
 3 info using node@v6.3.1
-4 verbose publish [ '.' ]
-5 silly cache add args [ '.', null ]
-6 verbose cache add spec .
-7 silly cache add parsed spec Result {
-7 silly cache add   raw: '.',
-7 silly cache add   scope: null,
-7 silly cache add   escapedName: null,
-7 silly cache add   name: null,
-7 silly cache add   rawSpec: '.',
-7 silly cache add   spec: '/var/www/html/randomizing-names',
-7 silly cache add   type: 'directory' }
-8 verbose addLocalDirectory /home/ivan/.npm/randomizing-names/1.0.0/package.tgz not in flight; packing
-9 verbose correctMkdir /home/ivan/.npm correctMkdir not in flight; initializing
-10 info lifecycle randomizing-names@1.0.0~prepublish: randomizing-names@1.0.0
-11 silly lifecycle randomizing-names@1.0.0~prepublish: no script for prepublish, continuing
-12 verbose tar pack [ '/home/ivan/.npm/randomizing-names/1.0.0/package.tgz',
-12 verbose tar pack   '/var/www/html/randomizing-names' ]
-13 verbose tarball /home/ivan/.npm/randomizing-names/1.0.0/package.tgz
-14 verbose folder /var/www/html/randomizing-names
-15 verbose addLocalTarball adding from inside cache /home/ivan/.npm/randomizing-names/1.0.0/package.tgz
-16 verbose correctMkdir /home/ivan/.npm correctMkdir not in flight; initializing
-17 silly cache afterAdd randomizing-names@1.0.0
-18 verbose afterAdd /home/ivan/.npm/randomizing-names/1.0.0/package/package.json not in flight; writing
-19 verbose correctMkdir /home/ivan/.npm correctMkdir not in flight; initializing
-20 verbose afterAdd /home/ivan/.npm/randomizing-names/1.0.0/package/package.json written
-21 silly publish { name: 'randomizing-names',
-21 silly publish   version: '1.0.0',
-21 silly publish   description: 'Get random names',
-21 silly publish   main: 'dist/index.js',
-21 silly publish   scripts:
-21 silly publish    { prebuild: 'rimraf dist',
-21 silly publish      build: 'npm-run-all --parallel build:*',
-21 silly publish      'build:main': 'babel --copy-files --out-dir dist --ignore *.test.js src',
-21 silly publish      'build:umd': 'webpack --output-filename index.umd.js',
-21 silly publish      'build:umd.min': 'webpack --output-filename index.umd.min.js -p',
-21 silly publish      test: 'cross-env NODE_ENV=test nyc mocha',
-21 silly publish      'watch:test': 'mocha --watch',
-21 silly publish      'report-coverage': 'cat ./coverage/lcov.info | codecov',
-21 silly publish      lint: 'eslint src',
-21 silly publish      validate: 'npm-run-all --parallel test lint build' },
-21 silly publish   repository:
-21 silly publish    { type: 'git',
-21 silly publish      url: 'git+https://github.com/IvanNieto/randomizing-names.git' },
-21 silly publish   keywords: [ 'random', 'star wars' ],
-21 silly publish   files: [ 'dist' ],
-21 silly publish   author: { name: 'Ivan Nieto', email: 'ivan.n.s@tuta.io' },
-21 silly publish   license: 'MIT',
-21 silly publish   bugs: { url: 'https://github.com/IvanNieto/randomizing-names/issues' },
-21 silly publish   homepage: 'https://github.com/IvanNieto/randomizing-names#readme',
-21 silly publish   dependencies: { 'unique-random-array': '1.0.0' },
-21 silly publish   devDependencies:
-21 silly publish    { 'babel-cli': '6.11.4',
-21 silly publish      'babel-loader': '^6.2.4',
-21 silly publish      'babel-plugin-istanbul': '1.0.3',
-21 silly publish      'babel-preset-es2015': '6.9.0',
-21 silly publish      'babel-register': '6.11.6',
-21 silly publish      chai: '3.5.0',
-21 silly publish      codecov: '^1.0.1',
-21 silly publish      'cross-env': '2.0.0',
-21 silly publish      eslint: '3.2.0',
-21 silly publish      'eslint-config-kentcdodds': '^9.0.0',
-21 silly publish      ghooks: '1.3.2',
-21 silly publish      'json-loader': '^0.5.4',
-21 silly publish      mocha: '3.0.0',
-21 silly publish      'npm-run-all': '2.3.0',
-21 silly publish      nyc: '7.1.0',
-21 silly publish      rimraf: '2.5.4',
-21 silly publish      webpack: '^1.13.1' },
-21 silly publish   nyc:
-21 silly publish    { all: true,
-21 silly publish      'check-coverage': true,
-21 silly publish      branches: 100,
-21 silly publish      function: 100,
-21 silly publish      lines: 100,
-21 silly publish      statements: 100,
-21 silly publish      reporter: [ 'text', 'lcov' ],
-21 silly publish      include: [ 'src' ],
-21 silly publish      sourceMap: false,
-21 silly publish      instrument: false,
-21 silly publish      require: [ 'babel-register' ] },
-21 silly publish   babel: { presets: [ 'es2015' ], env: { test: [Object] } },
-21 silly publish   config: { ghooks: { 'pre-commit': 'npm run validate' } },
-21 silly publish   readme: '# randomizing-names\n\n[![Build Status](https://travis-ci.org/IvanNieto/randomizing-names.svg?branch=master)](https://travis-ci.org/IvanNieto/randomizing-names)\n\nThis will randomize names from a list\n',
-21 silly publish   readmeFilename: 'README.md',
-21 silly publish   gitHead: '26889f79352c944c3a6a661cf42717a4fed01e71',
-21 silly publish   _id: 'randomizing-names@1.0.0',
-21 silly publish   _shasum: '49a24170e7eca80a15fe3448c38bf1abbd7b3bb0',
-21 silly publish   _from: '.' }
-22 verbose getPublishConfig undefined
-23 silly mapToRegistry name randomizing-names
-24 silly mapToRegistry using default registry
-25 silly mapToRegistry registry https://registry.npmjs.org/
-26 silly mapToRegistry data Result {
-26 silly mapToRegistry   raw: 'randomizing-names',
-26 silly mapToRegistry   scope: null,
-26 silly mapToRegistry   escapedName: 'randomizing-names',
-26 silly mapToRegistry   name: 'randomizing-names',
-26 silly mapToRegistry   rawSpec: '',
-26 silly mapToRegistry   spec: 'latest',
-26 silly mapToRegistry   type: 'tag' }
-27 silly mapToRegistry uri https://registry.npmjs.org/randomizing-names
-28 verbose publish registryBase https://registry.npmjs.org/
-29 silly publish uploading /home/ivan/.npm/randomizing-names/1.0.0/package.tgz
-30 verbose request uri https://registry.npmjs.org/randomizing-names
-31 verbose request sending authorization for write operation
-32 info attempt registry request try #1 at 22:13:13
-33 verbose request using bearer token for auth
-34 verbose request id e93faff6612bf7d5
-35 http request PUT https://registry.npmjs.org/randomizing-names
-36 http 403 https://registry.npmjs.org/randomizing-names
-37 verbose headers { 'content-type': 'application/json',
-37 verbose headers   'cache-control': 'max-age=300',
-37 verbose headers   'content-length': '95',
-37 verbose headers   'accept-ranges': 'bytes',
-37 verbose headers   date: 'Tue, 09 Aug 2016 20:13:14 GMT',
-37 verbose headers   via: '1.1 varnish',
-37 verbose headers   connection: 'keep-alive',
-37 verbose headers   'x-served-by': 'cache-fra1240-FRA',
-37 verbose headers   'x-cache': 'MISS',
-37 verbose headers   'x-cache-hits': '0',
-37 verbose headers   'x-timer': 'S1470773593.716010,VS0,VE1116',
-37 verbose headers   vary: 'Accept-Encoding' }
-38 verbose request invalidating /home/ivan/.npm/registry.npmjs.org/randomizing-names on PUT
-39 error publish Failed PUT 403
-40 verbose stack Error: "You cannot publish over the previously published version 1.0.0." : randomizing-names
-40 verbose stack     at makeError (/usr/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
-40 verbose stack     at CachingRegistryClient.<anonymous> (/usr/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
-40 verbose stack     at Request._callback (/usr/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
-40 verbose stack     at Request.self.callback (/usr/lib/node_modules/npm/node_modules/request/request.js:200:22)
-40 verbose stack     at emitTwo (events.js:106:13)
-40 verbose stack     at Request.emit (events.js:191:7)
-40 verbose stack     at Request.<anonymous> (/usr/lib/node_modules/npm/node_modules/request/request.js:1067:10)
-40 verbose stack     at emitOne (events.js:101:20)
-40 verbose stack     at Request.emit (events.js:188:7)
-40 verbose stack     at IncomingMessage.<anonymous> (/usr/lib/node_modules/npm/node_modules/request/request.js:988:12)
-41 verbose statusCode 403
-42 verbose pkgid randomizing-names
-43 verbose cwd /var/www/html/randomizing-names
-44 error Linux 4.4.0-31-generic
-45 error argv "/usr/bin/nodejs" "/usr/bin/npm" "publish"
-46 error node v6.3.1
-47 error npm  v3.10.3
-48 error code E403
-49 error "You cannot publish over the previously published version 1.0.0." : randomizing-names
-50 error If you need help, you may report this error at:
-50 error     <https://github.com/npm/npm/issues>
-51 verbose exit [ 1, true ]
+4 info git [ 'status', '--porcelain' ]
+5 verbose stack Error: Git working directory not clean.
+5 verbose stack M .travis.yml
+5 verbose stack M npm-debug.log
+5 verbose stack     at /usr/lib/node_modules/npm/lib/version.js:247:19
+5 verbose stack     at /usr/lib/node_modules/npm/lib/utils/no-progress-while-running.js:21:8
+5 verbose stack     at ChildProcess.exithandler (child_process.js:193:7)
+5 verbose stack     at emitTwo (events.js:106:13)
+5 verbose stack     at ChildProcess.emit (events.js:191:7)
+5 verbose stack     at maybeClose (internal/child_process.js:852:16)
+5 verbose stack     at Socket.<anonymous> (internal/child_process.js:323:11)
+5 verbose stack     at emitOne (events.js:96:13)
+5 verbose stack     at Socket.emit (events.js:188:7)
+5 verbose stack     at Pipe._handle.close [as _onclose] (net.js:492:12)
+6 verbose cwd /var/www/html/randomizing-names
+7 error Linux 4.4.0-31-generic
+8 error argv "/usr/bin/nodejs" "/usr/bin/npm" "version" "major"
+9 error node v6.3.1
+10 error npm  v3.10.3
+11 error Git working directory not clean.
+11 error M .travis.yml
+11 error M npm-debug.log
+12 error If you need help, you may report this error at:
+12 error     <https://github.com/npm/npm/issues>
+13 verbose exit [ 1, true ]
