@@ -1,5 +1,5 @@
 # randomizing-names
 
-[![Build Status](https://travis-ci.org/IvanNieto/randomizing-names.svg?branch=master)](https://travis-ci.org/IvanNieto/randomizing-names)
+[![Build Status](https://travis-ci.org/ivannieto/randomizing-names.svg?branch=master)](https://travis-ci.org/ivannieto/randomizing-names)
 
-This will randomize names from a list
+This npm module will randomize names from a given list
